@@ -39,7 +39,9 @@ def bbox_iou(box1, box2):
     return iou
 
 # YOLOv5 모델 로드 (CPU 환경에서 best.pt 파일 경로)
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='C:/근태모델/melody/best.pt', force_reload=True)
+# YOLOv5 모델 로드 (현재 디렉토리의 best.pt 파일 경로)
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt', force_reload=True)
+
 
 # 테스트할 이미지 경로
 img_path = 'C:/Users/yangw/OneDrive/바탕 화면/dfdf.jpg'
